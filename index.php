@@ -142,7 +142,7 @@ $valid_url_regex = '/.*/';
 
 // ############################################################################
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$url = str_replace('localhost/api', 'factoringonline.net.pe', $actual_link);
+$url = str_replace('factoringonline.pe/api', 'factoringonline.net.pe', $actual_link);
 
 //$url = $_GET['url'];
 
