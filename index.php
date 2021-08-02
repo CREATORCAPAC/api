@@ -180,7 +180,7 @@ if ( !$url ) {
     
     curl_setopt( $ch, CURLOPT_COOKIE, $cookie );
   }
-  
+  try {
   curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
   curl_setopt( $ch, CURLOPT_HEADER, true );
   curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
@@ -192,6 +192,9 @@ if ( !$url ) {
   $status = curl_getinfo( $ch );
   
   curl_close( $ch );
+  } catch (Exception $e) {
+    print $e->getMessage();
+  }
 }
 
 // Split header text into an array.
