@@ -141,7 +141,7 @@ $enable_native   = true;
 $valid_url_regex = '/.*/';
 
 // ############################################################################
-$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "http" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $url = str_replace(['34.72.3.233/api','localhost/api','factoringonline.pe/api'], "factoringonline.net.pe/HAWKEYE", $actual_link);
 $url = str_replace('/HAWKEYE/?','/HAWKEYE/',$url);    
 //echo $url;
