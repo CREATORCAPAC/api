@@ -253,7 +253,8 @@ if ( $enable_native ) {
   
   // Set the JSON data object contents, decoding it from JSON if possible.
   $decoded_json = json_decode( $contents );
-  $data['contents'] = $decoded_json ? $decoded_json : $contents;
+  //$data['contents'] = $decoded_json ? $decoded_json : $contents;
+  $data = $decoded_json ? $decoded_json : $contents;
   
   // Generate appropriate content-type header.
   if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
